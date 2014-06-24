@@ -16,6 +16,12 @@ To update an existing project:
 mrt update yo-meteor
 ```
 
+This package requires the HTTP package from Meteor, so if you're not using that package already, go ahead and install that with:
+
+```
+meteor add http
+```
+
 ## How to Use
 
 Define the Yo API on the _server side_ of the Meteor app:
