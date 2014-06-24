@@ -3,7 +3,8 @@ Package.describe({
 });
 
 Package.on_use(function (api, where) {
-  api.add_files('lib/yo.js', ['client', 'server']);
+    api.export && api.export('yoAPI', 'server');
+    api.add_files('lib/yo.js', ['client', 'server']);
 });
 
 Package.on_test(function (api, where){
