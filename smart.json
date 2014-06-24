@@ -1,0 +1,9 @@
+{
+name: "yo-meteor",
+description: "Yo API wrapper for Meteor",
+homepage: "",
+author: "Paul Molluzzo",
+version: "0.1.0",
+git: "",
+packages: {}
+}
