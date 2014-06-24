@@ -4,6 +4,6 @@
 "homepage": "https://github.com/paulmolluzzo/yo-meteor",
 "author": "Paul Molluzzo",
 "version": "0.1.0",
-"git": "git@github.com:paulmolluzzo/yo-meteor.git",
+"git": "https://github.com/paulmolluzzo/yo-meteor.git",
 "packages": {}
 }
