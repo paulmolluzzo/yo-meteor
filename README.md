@@ -24,21 +24,31 @@ meteor add http
 
 ## How to Use
 
-Define the Yo API and the method for calling the Yo function on the _server side_ of the Meteor app:
+Define the Yo API on the _server side_ of the Meteor app:
 
 ```
 if (Meteor.isServer) {
     var yo = new yoAPI('YOUR_YO_API_KEY');
-
-        Meteor.methods({
-        yoAll: function(){
-            return yo.all()
-        }
-    });
 }
 ```
 
-Then call the Yo API method from someplace in the app:
+Now you can send a Yo to everyone with one line on the server side:
+
+```
+yo.all()
+```
+
+To send a Yo from an action on the client side, set up a `Meteor.method` on the server side of the Meteor app:
+
+```
+Meteor.methods({
+    yoAll: function(){
+        return yo.all()
+    }
+});
+```
+
+Then call the Yo API method from someplace on the client side:
 
 ```
 Meteor.call('yoAll');
