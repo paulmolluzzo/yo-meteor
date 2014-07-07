@@ -41,7 +41,7 @@ yo.all()
 Or send a Yo to one person:
 
 ```
-yo.one('paulm')
+yo.one('PAULM')
 ```
 
 To send a Yo from an action on the client side, set up a `Meteor.method` on the server side of the Meteor app:
