@@ -38,12 +38,21 @@ Now you can send a Yo to everyone with one line on the server side:
 yo.all()
 ```
 
+Or send a Yo to one person:
+
+```
+yo.one('paulm')
+```
+
 To send a Yo from an action on the client side, set up a `Meteor.method` on the server side of the Meteor app:
 
 ```
 Meteor.methods({
     yoAll: function(){
         return yo.all()
+    },
+    yoOne: function(user){
+        return yo.one(user)
     }
 });
 ```
@@ -52,6 +61,16 @@ Then call the Yo API method from someplace on the client side:
 
 ```
 Meteor.call('yoAll');
+```
+
+or
+
+```
+Meteor.call('yoOne', username, function(error, result){
+    if(!err){
+        console.log(result)
+    }
+});
 ```
 
 ## More Info
