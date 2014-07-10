@@ -1,6 +1,6 @@
 # Yo API Package for Meteor
 
-This is a very simple package to wrap the [Yo API service](http://yoapi.justyo.co) for use in a Meteor project.
+This is a wrapper for the [Yo API service](http://dev.justyo.co/) for use in a Meteor project.
 
 ## Install
 
@@ -44,6 +44,12 @@ Or send a Yo to one person:
 yo.one('PAULM')
 ```
 
+Or get your Yo subscribers count:
+
+```
+yo.subscribers()
+```
+
 To send a Yo from an action on the client side, set up a `Meteor.method` on the server side of the Meteor app:
 
 ```
@@ -53,6 +59,9 @@ Meteor.methods({
     },
     yoOne: function(user){
         return yo.one(user)
+    },
+    yoSubscribers: function(){
+        return yo.subscribers()
     }
 });
 ```
@@ -66,9 +75,19 @@ Meteor.call('yoAll');
 or
 
 ```
-Meteor.call('yoOne', username, function(error, result){
+Meteor.call('yoOne', username, function(err, result){
     if(!err){
         console.log(result)
+    }
+});
+```
+
+or
+
+```
+Meteor.call('yoSubscribers', function(err, result){
+    if(!err){
+        alert(result.data.result) // This is where the count is in the result.
     }
 });
 ```
