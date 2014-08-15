@@ -38,10 +38,21 @@ Now you can send a Yo to everyone with one line on the server side:
 yo.all()
 ```
 
+Attach a link to that Yo like this:
+
+```
+yo.all('http://meteor.com')
+```
+
 Or send a Yo to one person:
 
 ```
 yo.one('PAULM')
+```
+
+What a link:
+```
+yo.one('PAULM', 'http://atmospherejs.com')
 ```
 
 Or get your Yo subscribers count:
