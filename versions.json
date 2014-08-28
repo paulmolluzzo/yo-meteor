@@ -1,6 +1,10 @@
 {
   "dependencies": [
     [
+      "http",
+      "1.0.3"
+    ],
+    [
       "meteor",
       "1.0.2"
     ],

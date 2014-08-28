@@ -7,20 +7,10 @@ This is a wrapper for the [Yo API service](http://dev.justyo.co/) for use in a M
 To install in a new project:
 
 ```
-mrt add yo-meteor
+meteor add paulm:yo-meteor
 ```
 
-To update an existing project:
-
-```
-mrt update yo-meteor
-```
-
-This package requires the HTTP package from Meteor, so if you're not using that package already, go ahead and install that with:
-
-```
-meteor add http
-```
+This package uses the `http` Meteor package, so it will automatically add that in for you.
 
 ## How to Use
 
