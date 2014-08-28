@@ -1,9 +1,0 @@
-{
-"name": "yo-meteor",
-"description": "Yo API wrapper for Meteor",
-"homepage": "https://github.com/paulmolluzzo/yo-meteor",
-"author": "Paul Molluzzo",
-"version": "0.4.1",
-"git": "https://github.com/paulmolluzzo/yo-meteor.git",
-"packages": {}
-}
